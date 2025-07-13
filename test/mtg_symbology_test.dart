@@ -1,3 +1,6 @@
+import 'dart:convert';
+
+import 'package:http/http.dart' as http;
 import 'package:mtg_symbology/mtg_symbology.dart';
 import 'package:test/test.dart';
 
@@ -19,6 +22,27 @@ void main() {
         expect(mtgSymbology['white mana'], isNull);
         expect(mtgSymbology['{w}'], isNull);
         expect(mtgSymbology['{W}'], isNotNull);
+      },
+    );
+
+    test(
+      'mtgSymbology accounts for all symbols in Magic: The Gathering '
+      'comprehensive rules, using Scryfall as the source of truth',
+      () async {
+        final response = await http.get(
+          Uri.parse('https://api.scryfall.com/symbology'),
+          headers: {
+            'User-Agent': 'mtg_symbology/1',
+            'Accept': 'application/json',
+          },
+        );
+        expect(response.statusCode, equals(200));
+        final decoded = jsonDecode(response.body) as Map<String, dynamic>;
+        expect(decoded.containsKey('data'), isTrue);
+        final data = (decoded['data'] as List).cast<Map<String, dynamic>>();
+        expect(data.length, equals(mtgSymbology.length));
+        final symbols = data.map((s) => s['symbol']).toSet();
+        expect(symbols, equals(mtgSymbology.keys.toSet()));
       },
     );
   });
