@@ -2,7 +2,7 @@
 
 * Use [very_good_analysis](https://pub.dev/packages/very_good_analysis) for the analysis options rather than defining custom rules
     * Address all lints raised from these new rules
-    * Update [license](https://pub.dev/packages/mtg_symbology/license) copyright
+* Update [license](https://pub.dev/packages/mtg_symbology/license) copyright
 
 ### 1.0.2 - December 30, 2025
 
