@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart' show immutable;
 import 'package:flutter_svg/flutter_svg.dart' show SvgPicture;
 
 /// A [Map] representing all of the known Magic: The Gathering symbols.
@@ -6,49 +7,41 @@ import 'package:flutter_svg/flutter_svg.dart' show SvgPicture;
 const Map<String, MtgSymbol> mtgSymbology = {
   '{T}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/T.svg',
-    looseVariant: null,
     english: 'tap this permanent',
     manaValue: 0,
   ),
   '{Q}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/Q.svg',
-    looseVariant: null,
     english: 'untap this permanent',
     manaValue: 0,
   ),
   '{E}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/E.svg',
-    looseVariant: null,
     english: 'an energy counter',
     manaValue: 0,
   ),
   '{P}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/P.svg',
-    looseVariant: null,
     english: 'modal budget pawprint',
     manaValue: 0,
   ),
   '{PW}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/PW.svg',
-    looseVariant: null,
     english: 'planeswalker',
     manaValue: 0,
   ),
   '{CHAOS}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/CHAOS.svg',
-    looseVariant: null,
     english: 'chaos',
     manaValue: 0,
   ),
   '{A}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/A.svg',
-    looseVariant: null,
     english: 'an acorn counter',
     manaValue: 0,
   ),
   '{TK}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/TK.svg',
-    looseVariant: null,
     english: 'a ticket counter',
     manaValue: 0,
   ),
@@ -218,239 +211,199 @@ const Map<String, MtgSymbol> mtgSymbology = {
     image: 'packages/mtg_symbology/assets/INFINITY.svg',
     looseVariant: '∞',
     english: 'infinite generic mana',
-    manaValue: null,
   ),
   '{W/U}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/WU.svg',
-    looseVariant: null,
     english: 'one white or blue mana',
     manaValue: 1,
   ),
   '{W/B}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/WB.svg',
-    looseVariant: null,
     english: 'one white or black mana',
     manaValue: 1,
   ),
   '{B/R}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/BR.svg',
-    looseVariant: null,
     english: 'one black or red mana',
     manaValue: 1,
   ),
   '{B/G}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/BG.svg',
-    looseVariant: null,
     english: 'one black or green mana',
     manaValue: 1,
   ),
   '{U/B}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/UB.svg',
-    looseVariant: null,
     english: 'one blue or black mana',
     manaValue: 1,
   ),
   '{U/R}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/UR.svg',
-    looseVariant: null,
     english: 'one blue or red mana',
     manaValue: 1,
   ),
   '{R/G}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/RG.svg',
-    looseVariant: null,
     english: 'one red or green mana',
     manaValue: 1,
   ),
   '{R/W}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/RW.svg',
-    looseVariant: null,
     english: 'one red or white mana',
     manaValue: 1,
   ),
   '{G/W}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/GW.svg',
-    looseVariant: null,
     english: 'one green or white mana',
     manaValue: 1,
   ),
   '{G/U}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/GU.svg',
-    looseVariant: null,
     english: 'one green or blue mana',
     manaValue: 1,
   ),
   '{B/G/P}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/BGP.svg',
-    looseVariant: null,
     english: 'one black mana, one green mana, or 2 life',
     manaValue: 1,
   ),
   '{B/R/P}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/BRP.svg',
-    looseVariant: null,
     english: 'one black mana, one red mana, or 2 life',
     manaValue: 1,
   ),
   '{G/U/P}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/GUP.svg',
-    looseVariant: null,
     english: 'one green mana, one blue mana, or 2 life',
     manaValue: 1,
   ),
   '{G/W/P}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/GWP.svg',
-    looseVariant: null,
     english: 'one green mana, one white mana, or 2 life',
     manaValue: 1,
   ),
   '{R/G/P}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/RGP.svg',
-    looseVariant: null,
     english: 'one red mana, one green mana, or 2 life',
     manaValue: 1,
   ),
   '{R/W/P}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/RWP.svg',
-    looseVariant: null,
     english: 'one red mana, one white mana, or 2 life',
     manaValue: 1,
   ),
   '{U/B/P}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/UBP.svg',
-    looseVariant: null,
     english: 'one blue mana, one black mana, or 2 life',
     manaValue: 1,
   ),
   '{U/R/P}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/URP.svg',
-    looseVariant: null,
     english: 'one blue mana, one red mana, or 2 life',
     manaValue: 1,
   ),
   '{W/B/P}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/WBP.svg',
-    looseVariant: null,
     english: 'one white mana, one black mana, or 2 life',
     manaValue: 1,
   ),
   '{W/U/P}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/WUP.svg',
-    looseVariant: null,
     english: 'one white mana, one blue mana, or 2 life',
     manaValue: 1,
   ),
   '{C/W}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/CW.svg',
-    looseVariant: null,
     english: 'one colorless mana or one white mana',
     manaValue: 1,
   ),
   '{C/U}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/CU.svg',
-    looseVariant: null,
     english: 'one colorless mana or one blue mana',
     manaValue: 1,
   ),
   '{C/B}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/CB.svg',
-    looseVariant: null,
     english: 'one colorless mana or one black mana',
     manaValue: 1,
   ),
   '{C/R}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/CR.svg',
-    looseVariant: null,
     english: 'one colorless mana or one red mana',
     manaValue: 1,
   ),
   '{C/G}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/CG.svg',
-    looseVariant: null,
     english: 'one colorless mana or one green mana',
     manaValue: 1,
   ),
   '{2/W}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/2W.svg',
-    looseVariant: null,
     english: 'two generic mana or one white mana',
     manaValue: 2,
   ),
   '{2/U}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/2U.svg',
-    looseVariant: null,
     english: 'two generic mana or one blue mana',
     manaValue: 2,
   ),
   '{2/B}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/2B.svg',
-    looseVariant: null,
     english: 'two generic mana or one black mana',
     manaValue: 2,
   ),
   '{2/R}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/2R.svg',
-    looseVariant: null,
     english: 'two generic mana or one red mana',
     manaValue: 2,
   ),
   '{2/G}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/2G.svg',
-    looseVariant: null,
     english: 'two generic mana or one green mana',
     manaValue: 2,
   ),
   '{H}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/H.svg',
-    looseVariant: null,
     english: 'one colored mana or two life',
     manaValue: 1,
   ),
   '{W/P}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/WP.svg',
-    looseVariant: null,
     english: 'one white mana or two life',
     manaValue: 1,
   ),
   '{U/P}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/UP.svg',
-    looseVariant: null,
     english: 'one blue mana or two life',
     manaValue: 1,
   ),
   '{B/P}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/BP.svg',
-    looseVariant: null,
     english: 'one black mana or two life',
     manaValue: 1,
   ),
   '{R/P}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/RP.svg',
-    looseVariant: null,
     english: 'one red mana or two life',
     manaValue: 1,
   ),
   '{G/P}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/GP.svg',
-    looseVariant: null,
     english: 'one green mana or two life',
     manaValue: 1,
   ),
   '{C/P}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/CP.svg',
-    looseVariant: null,
     english: 'one colorless mana or two life',
     manaValue: 1,
   ),
   '{HW}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/HW.svg',
-    looseVariant: null,
     english: 'one-half white mana',
     manaValue: 0.5,
   ),
   '{HR}': MtgSymbol(
     image: 'packages/mtg_symbology/assets/HR.svg',
-    looseVariant: null,
     english: 'one-half red mana',
     manaValue: 0.5,
   ),
@@ -513,7 +466,17 @@ const Map<String, MtgSymbol> mtgSymbology = {
 /// Represents a single Magic: The Gathering symbol.
 ///
 /// See [toSvg] for a visual representation of this symbol.
+@immutable
 class MtgSymbol {
+  /// Creates a new [MtgSymbol] instance. [looseVariant] and [manaValue] are
+  /// optional because not all [MtgSymbol] instances have them.
+  const MtgSymbol({
+    required this.english,
+    required this.image,
+    this.looseVariant,
+    this.manaValue,
+  });
+
   /// An English snippet that describes this symbol.
   /// Appropriate for use in alt text or other accessible communication formats.
   final String english;
@@ -528,15 +491,6 @@ class MtgSymbol {
   /// The mana value of this symbol, if any. This is a [double] because some
   /// "Un" set symbols have fractional mana values.
   final double? manaValue;
-
-  /// Creates a new [MtgSymbol] instance. [looseVariant] and [manaValue] are
-  /// optional because not all [MtgSymbol] instances have them.
-  const MtgSymbol({
-    required this.english,
-    required this.image,
-    this.looseVariant,
-    this.manaValue,
-  });
 
   /// A regular expression used to find MTG symbol syntax in a [String],
   /// where that is defined as a left curly brace, followed by any number of
