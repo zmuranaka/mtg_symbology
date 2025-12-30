@@ -10,29 +10,34 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
     return MaterialApp(
       title: 'Mtg Symbology Example App',
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          backgroundColor: colorScheme.inversePrimary,
           title: Text('Mtg Symbology Example App'),
         ),
-        body: SafeArea(
-          child: Wrap(
-            children: [
-              for (final symbol in mtgSymbology.entries)
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    children: [
-                      Text(symbol.key),
-                      const SizedBox(height: 8),
-                      symbol.value.toSvg(),
-                    ],
-                  ),
-                ),
-            ],
-          ),
+        body: ListView(
+          children: [
+            SafeArea(
+              child: Wrap(
+                children: [
+                  for (final symbol in mtgSymbology.entries)
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: [
+                          Text(symbol.key),
+                          const SizedBox(height: 8),
+                          symbol.value.toSvg(),
+                        ],
+                      ),
+                    ),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
