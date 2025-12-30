@@ -1,3 +1,9 @@
+### 1.0.3 - December 30, 2025
+
+* Use [very_good_analysis](https://pub.dev/packages/very_good_analysis) for the analysis options rather than defining custom rules
+    * Address all lints raised from these new rules
+    * Update [license](https://pub.dev/packages/mtg_symbology/license) copyright
+
 ### 1.0.2 - December 30, 2025
 
 * Make minimum supported [flutter_svg](https://pub.dev/packages/flutter_svg) version 2.2.3
