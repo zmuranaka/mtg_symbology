@@ -1,3 +1,8 @@
+### 1.0.4 - February 22, 2026
+
+* Upgrade [test](https://pub.dev/packages/test) dev dependency version
+* Remove [flutter_lints](https://pub.dev/packages/flutter_lints) dev dependency, addressing [#4](https://github.com/zmuranaka/mtg_symbology/issues/4)
+
 ### 1.0.3 - December 30, 2025
 
 * Use [very_good_analysis](https://pub.dev/packages/very_good_analysis) for the analysis options rather than defining custom rules
