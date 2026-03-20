@@ -1,5 +1,6 @@
 ### 1.0.5 - March 19, 2026
 
+* Upgrade [flutter_svg](https://pub.dev/packages/flutter_svg) dependency version
 * Make minimum supported SDK version Flutter 3.35/Dart 3.9 - in line with [flutter_svg](https://github.com/flutter/packages/blob/8dcfd1186ef968be1398f80432f94bb0a36e6d9e/third_party/packages/flutter_svg/pubspec.yaml#L8-L9)
 * Upgrade [test](https://pub.dev/packages/test) dev dependency version
 * Upgrade [very_good_analysis](https://pub.dev/packages/very_good_analysis) dev dependency version
