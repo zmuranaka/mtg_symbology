@@ -5,7 +5,9 @@ void main() {
   runApp(const MyApp());
 }
 
+/// A simple example app for demonstrating the mtg_symbology package.
 class MyApp extends StatelessWidget {
+  /// Construct a [MyApp], optionally passing [key].
   const MyApp({super.key});
 
   @override
@@ -16,7 +18,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: colorScheme.inversePrimary,
-          title: Text('Mtg Symbology Example App'),
+          title: const Text('Mtg Symbology Example App'),
         ),
         body: ListView(
           children: [
@@ -25,7 +27,7 @@ class MyApp extends StatelessWidget {
                 children: [
                   for (final symbol in mtgSymbology.entries)
                     Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(8),
                       child: Column(
                         children: [
                           Text(symbol.key),
