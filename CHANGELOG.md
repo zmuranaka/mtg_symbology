@@ -1,3 +1,11 @@
+### 1.0.7 - September 12, 2026
+
+* Update the [example](https://github.com/zmuranaka/mtg_symbology/tree/master/example) app
+    * Bumped Java, Kotlin, and other versions
+    * Uses [very_good_analysis](https://pub.dev/packages/very_good_analysis) now
+* Upgrade [test](https://pub.dev/packages/test) dev dependency version
+* Upgrade [very_good_analysis](https://pub.dev/packages/very_good_analysis) dev dependency version
+
 ### 1.0.6 - July 3, 2026
 
 * Upgrade [flutter_svg](https://pub.dev/packages/flutter_svg) dependency version
